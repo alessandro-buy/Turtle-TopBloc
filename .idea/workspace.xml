@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aad42399-46ea-4d0d-af94-280644723b27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TopBloc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TopBloc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopBloc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TopBloc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TopBloc.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="17" selection-end-column="21" />
+            <state relative-caret-position="351">
+              <caret line="25" selection-start-line="25" selection-end-line="29" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -31,10 +34,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TopBloc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="206">
+              <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#465#474#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,13 +47,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="105">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
               <folding>
-                <element signature="e#326#327#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,9 +160,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -256,30 +260,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="351">
+          <caret line="25" selection-start-line="25" selection-end-line="29" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="105">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
           <folding>
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TopBloc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="206">
+          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#465#474#0" expanded="true" />
           </folding>
         </state>
       </provider>
