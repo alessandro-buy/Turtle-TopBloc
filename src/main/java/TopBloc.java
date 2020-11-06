@@ -7,6 +7,11 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.http.client.*;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.*;
+import org.apache.http.HttpResponse;
 
 
 
@@ -74,7 +79,6 @@ public class TopBloc {
             total+= (float) value;
         }
         return total/(h.values().size());
-
     }
 
     public ArrayList<Integer> getFCSMajors(ArrayList<Student> students) {
@@ -94,30 +98,30 @@ public class TopBloc {
     {
         TopBloc a = new TopBloc();
         a.ProcessStudentData();
-        //System.out.println(students);
+        System.out.println(students);
         a.processTests();
-        //System.out.println(scores);
+        System.out.println(scores);
         a.processRetakes();
-        //System.out.println(scores);
-        //System.out.println();
+        System.out.println(scores);
+        System.out.println();
+
+
         System.out.println("The class average, after retakes is: ");
         System.out.print(a.calculateAverage(scores));
         System.out.println();
         System.out.println("The IDs of the students that are female computer science majors are: ");
         System.out.println(a.getFCSMajors(students));
 
-
-        HttpClient httpClient = HttpClientBuilder.create().build();
-        try {
-            HttpPost request = new HttpPost("http://yoururl");
-            StringEntity params = new StringEntity("details={\"name\":\"xyz\",\"age\":\"20\"} ");
-            request.addHeader("content-type", "application/x-www-form-urlencoded");
-            request.setEntity(params);
-            HttpResponse response = httpClient.execute(request);
-        } catch (Exception ex) {
-        } finally {
-            // @Deprecated httpClient.getConnectionManager().shutdown();
-        }
+//
+//        HttpClient httpClient = HttpClientBuilder.create().build();
+//        try {
+//            HttpPost request = new HttpPost("http://54.90.99.192:5000/challenge");
+//            StringEntity params = new StringEntity("details={\"name\":\"xyz\",\"age\":\"20\"} ");
+//            request.addHeader("content-type", "application/x-www-form-urlencoded");
+//            request.setEntity(params);
+//            HttpResponse response = httpClient.execute(request);
+//        } catch (Exception ex) {
+//        }
 
 
 
