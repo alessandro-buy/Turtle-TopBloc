@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileInputStream;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Collections;
@@ -8,22 +9,40 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.http.client.*;
-import org.apache.http.client.HttpClient;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.*;
-import org.apache.http.HttpResponse;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.*;
-import com.google.gson.Gson;
-import java.net.URL;
-import java.net.HttpURLConnection;
-import java.net.*;
 import java.io.*;
-import java.util.Map;
+//import org.apache.http.client.*;
+//import org.apache.http.client.HttpClient;
+//import org.apache.http.impl.client.CloseableHttpClient;
+//import org.apache.http.impl.client.HttpClientBuilder;
+//import org.apache.http.client.methods.HttpPost;
+//import org.apache.http.entity.*;
 
+//import org.apache.http.HttpResponse;
+//import org.apache.http.impl.client.DefaultHttpClient;
+
+//import com.google.gson.Gson;
+//import java.net.URL;
+//import java.net.HttpURLConnection;
+//import java.net.*;
+//
+//import java.util.Map;
+//import java.net.http.HttpRequest;
+
+
+//import org.apache.http.client.methods.HttpPut;
+//import org.apache.http.HttpEntity;
+
+
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpRequest.BodyPublisher.*;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpRequest;
 
 
 public class TopBloc {
@@ -117,8 +136,7 @@ public class TopBloc {
 
 
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
         TopBloc a = new TopBloc();
         a.ProcessStudentData();
         System.out.println(students);
@@ -148,29 +166,27 @@ public class TopBloc {
 
         String jsonText = output.toString();
         System.out.print(jsonText);
+        System.out.println();
+        //~~~~~~~~~~~~~~~~~
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("http://54.90.99.192:5000/challenge"))
+                    .header("Content-type", "application/json")
+                    .POST(BodyPublishers.ofString(jsonText))
+                    .build();
 
+            HttpResponse<Void> response = client.send(request,
+                    HttpResponse.BodyHandlers.discarding());
 
-//
+            System.out.println(response.statusCode());
 
+        } catch (Exception e) {
 
-//        HttpClient httpClient = HttpClientBuilder.create().build();
-//        try {
-//            HttpPost request = new HttpPost("http://54.90.99.192:5000/challenge");
-//            StringEntity params = new StringEntity(json.toString());
-//            request.addHeader("content-type", "application/json");
-//            request.setEntity(params);
-//            httpClient.execute(request);
-//            HttpResponse response = httpClient.execute(request);
-//            System.out.println(response);
-//        } catch (Exception ex) {
-//        }
-
-
-
+        }
 
 
 
 
     }
-
 }
