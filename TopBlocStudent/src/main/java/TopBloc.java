@@ -78,7 +78,7 @@ public class TopBloc {
             Float id = Float.valueOf(cell.next().toString());
             Float score = Float.valueOf(cell.next().toString());
             if (Float.compare(score, (Float) scores.get(id)) == 1) {
-                this.scores.replace(id, score);
+                scores.replace(id, score);
             }
 
         }
@@ -87,13 +87,13 @@ public class TopBloc {
     public float calculateAverage(HashMap h) {
         float total = 0;
         for (Object value : h.values()) {
-            total+= (float) value;
+            total+= (Float) value;
         }
         return total/(h.values().size());
     }
 
     public ArrayList<String> getFCSMajors(ArrayList<Student> students) {
-        ArrayList<String> answer = new ArrayList<>();
+        ArrayList<String> answer = new ArrayList<String>();
         for (Student s : students) {
             if (s.getMajor().equals("computer science") && s.getSex().equals("F")) {
                 answer.add(String.valueOf(s.getId()));
@@ -120,24 +120,35 @@ public class TopBloc {
     public static void main(String[] args)
     {
         TopBloc a = new TopBloc();
-//        a.ProcessStudentData();
-//        System.out.println(students);
-//        a.processTests();
-//        System.out.println(scores);
-//        a.processRetakes();
-//        System.out.println(scores);
-//        System.out.println();
-//
-//
-//        System.out.println("The class average, after retakes is: ");
-//        System.out.print(a.calculateAverage(scores));
-//        System.out.println();
-//        System.out.println("The IDs of the students that are female computer science majors are: ");
-//        System.out.println(a.getFCSMajors(students));
+        a.ProcessStudentData();
+        System.out.println(students);
+        a.processTests();
+        System.out.println(scores);
+        a.processRetakes();
+        System.out.println(scores);
+        System.out.println();
+
+
+        System.out.println("The class average, after retakes is: ");
+        System.out.print(a.calculateAverage(scores));
+        System.out.println();
+        System.out.println("The IDs of the students that are female computer science majors are: ");
+        System.out.println(a.getFCSMajors(students));
+
+        ArrayList<String> fcs = a.getFCSMajors(students);
+        Collections.sort(fcs);
 
         JSONObject json = new JSONObject();
         json.put("id", "alessandrobuy@gmail.com");
         json.put("name", "Alessandro Buy");
+        json.put("average", Math.round(a.calculateAverage(scores)));
+        json.put("studentIDs", fcs.toString());
+        StringWriter output = new StringWriter();
+        json.write(output);
+
+        String jsonText = output.toString();
+        System.out.print(jsonText);
+
 
 //
 
