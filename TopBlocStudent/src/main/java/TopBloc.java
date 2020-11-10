@@ -53,7 +53,7 @@ public class TopBloc {
      * This method puts all students from the "Student Info" file into the students variable
      */
     public void ProcessStudentData() {
-        Iterator<Row> itr = setUpIterator("/Users/Alessandro/Desktop/Turtle-TopBloc/Student Info.xlsx");
+        Iterator<Row> itr = setUpIterator("Student Info.xlsx");
         itr.next();
         while (itr.hasNext()) {
             Row row = itr.next();
@@ -68,7 +68,7 @@ public class TopBloc {
      * This method assigns each id with a score in the scores HashMap
      */
     public void processTests() {
-        Iterator<Row> itr = setUpIterator("/Users/Alessandro/Desktop/Turtle-TopBloc/Test Scores.xlsx");
+        Iterator<Row> itr = setUpIterator("Test Scores.xlsx");
         itr.next();
         while (itr.hasNext()) {
             Row row = itr.next();
@@ -84,7 +84,7 @@ public class TopBloc {
      * This method compares the retakes from the original scores and replaces them as needed
      */
     public void processRetakes() {
-        Iterator<Row> itr = setUpIterator("/Users/Alessandro/Desktop/Turtle-TopBloc/Test Retake Scores.xlsx");
+        Iterator<Row> itr = setUpIterator("Test Retake Scores.xlsx");
         itr.next();
         while (itr.hasNext()) {
             Row row = itr.next();
