@@ -1,4 +1,9 @@
 
+import java.net.Authenticator;
+import java.net.InetSocketAddress;
+import java.net.ProxySelector;
+import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.*;
 
 import jdk.jfr.StackTrace;
@@ -128,7 +133,7 @@ public class TopBloc {
 
 
     //Run the main method to execute the code
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         // Instantiate a TopBloc Object
         TopBloc a = new TopBloc();
@@ -166,7 +171,7 @@ public class TopBloc {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("http://54.90.99.192:5000/challenge"))
+                    .uri(URI.create("http://3.236.235.205:5000/challenge"))
                     .header("Content-Type", "application/json")
                     .POST(BodyPublishers.ofString(jsonText))
                     .build();
@@ -178,6 +183,7 @@ public class TopBloc {
         } catch (Exception e) {
             System.out.println(e.getStackTrace());
         }
+
 
     }
 }
